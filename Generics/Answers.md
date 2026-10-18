@@ -5,3 +5,11 @@ The internal logic, the underlying data structure (List<T>), and the method sign
 
 What is different?
 The only difference is the Data Type being operated on (Student in one class, and Course in the other). This heavy code duplication strongly indicates the need for a Generic Repository pattern (e.g., Store<T>) to unify the logic.
+
+## Generic Store Error
+
+Compiler Error:
+CS1061: 'T' does not contain a definition for 'Id' and no accessible extension method 'Id' accepting a first argument of type 'T' could be found.
+
+Explanation:
+The C# compiler is strictly type-safe. By declaring Store<T>, we are telling the compiler that T can be absolutely any data type (for example, a string, a DateTime, or an int). Since the compiler does not know what T will be, it cannot guarantee that T will have a property named Id. To prevent the program from crashing at runtime, the compiler plays it safe and rejects the code. It demands a guarantee (a generic constraint) that T will always have an Id.
