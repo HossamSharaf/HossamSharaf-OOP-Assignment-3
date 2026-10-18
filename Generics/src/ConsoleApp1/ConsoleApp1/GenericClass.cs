@@ -4,7 +4,12 @@ using System.Text;
 
 namespace ConsoleApp1
 {
+    public interface IHasId
+    {
+        int Id { get; } 
+    }
     public class Store<T>
+        where T : IHasId
     {
         private readonly List<T> _items = new List<T>();
 

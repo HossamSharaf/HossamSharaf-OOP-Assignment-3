@@ -4,7 +4,11 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    internal class Student
+    public class Student : IHasId
     {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
     }
 }
+
+    
