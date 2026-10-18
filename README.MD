@@ -1,4 +1,2 @@
-# Details
-## Name: Hossam Shawky Sharaf Eldein
-
-## Id : Group 3
+# HossamSharaf-OOP-Assignment-3
+Assignment repo for assignment/1-7 (OOP Assignment 3)
